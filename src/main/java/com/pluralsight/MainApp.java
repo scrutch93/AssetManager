@@ -10,7 +10,7 @@ public class MainApp {
         Double OverallValue = house.getValue();
 
 
-        Vehicle car = new Vehicle("Personal car", "9/11/2022", 4000, "Toyota Camry", 2021, 150000);
+        Vehicle car = new Vehicle("Personal car", "9/11/2022", 4000, "Toyota Camry", 2019, 150000);
 
         System.out.println(car.getValue());
 

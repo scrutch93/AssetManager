@@ -64,8 +64,24 @@ public class Vehicle extends Asset {
 
             cost -= cost * 00.03 * yearDifference;
 
-            return cost;
+
+        }else if (4 == yearDifference || yearDifference == 6 ||yearDifference == 5){
+
+            cost -= cost * 00.06 * yearDifference;
+        } else if (7 == yearDifference || yearDifference == 8 ||yearDifference == 9 || yearDifference == 10) {
+
+            cost -= cost * 00.08 * yearDifference;
+
+        } else if (yearDifference > 10) {
+
+            cost -= 1000;
         }
+
+
+
+
+
+
 
 
         return cost;
