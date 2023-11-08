@@ -55,7 +55,7 @@ public class House extends Asset {
     @Override
     public double getValue() {
 
-        double cost = getOriginalCost();
+        //double cost = getOriginalCost();
         int condition = getCondition();
         int SqFt = getSquareFoot();
         int lotSize = getLotSize();
