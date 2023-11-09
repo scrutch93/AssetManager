@@ -13,5 +13,14 @@ public class MainApp {
         MyAssets.add(new Vehicle("Personal car", "9/11/2022", 4000, "Toyota Camry", 2019, 150000));
         MyAssets.add(new Vehicle("Pimped out ride", "2/15/2006", 60000, "Chevy Corvette", 1950, 180000));
 
+        for (Asset x:MyAssets) {
+
+            System.out.printf("\n I acquired my %s on %s. I originally paid %.2f and it is now worth %.2f",x.getDescription(),x.getDateAquired(),x.getOriginalCost(), x.getValue());
+
+        }
+
+
+
+
     }
 }
