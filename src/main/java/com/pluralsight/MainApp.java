@@ -17,6 +17,16 @@ public class MainApp {
 
             System.out.printf("\n I acquired my %s on %s. I originally paid %.2f and it is now worth %.2f",x.getDescription(),x.getDateAquired(),x.getOriginalCost(), x.getValue());
 
+            if (x instanceof House){
+
+                System.out.printf("\n The address is %s", ((House) x).getAddress());
+
+            } else if (x instanceof  Vehicle){
+                System.out.printf("\n The make/Model is %s", ((Vehicle) x).getMakeModel());
+
+            }
+
+
         }
 
 
