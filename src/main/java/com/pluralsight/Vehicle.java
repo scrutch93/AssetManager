@@ -10,7 +10,6 @@ public class Vehicle extends Asset {
     private int odometer;
 
 
-
     public Vehicle(String description, String dateAquired, double originalCost, String makeModel, int year, int odometer) {
         super(description, dateAquired, originalCost);
 
@@ -48,27 +47,27 @@ public class Vehicle extends Asset {
     }
 
     @Override
-    public double getValue(){
+    public double getValue() {
 
         Year thisYear = Year.now();
         int currentYear = Integer.parseInt(thisYear.toString());
 
         String makeModel = getMakeModel();
         int year = getYear();
-        int yearDifference = currentYear-year;
+        int yearDifference = currentYear - year;
         int odometer = getOdometer();
         double cost = getOriginalCost();
 
 
-        if (yearDifference <= 3){
+        if (yearDifference <= 3) {
 
             cost -= cost * 00.03 * yearDifference;
 
 
-        }else if (4 == yearDifference || yearDifference == 6 ||yearDifference == 5){
+        } else if (4 == yearDifference || yearDifference == 6 || yearDifference == 5) {
 
             cost -= cost * 00.06 * yearDifference;
-        } else if (7 == yearDifference || yearDifference == 8 ||yearDifference == 9 || yearDifference == 10) {
+        } else if (7 == yearDifference || yearDifference == 8 || yearDifference == 9 || yearDifference == 10) {
 
             cost -= cost * 00.08 * yearDifference;
 
@@ -78,16 +77,17 @@ public class Vehicle extends Asset {
         }
 
 
+        if (odometer > 100000) {
 
+            cost -= cost * 00.25;
 
+        } else if (makeModel.contains("Toyota") || makeModel.contains("Honda")) {
 
+            return cost;
 
+        }
 
 
         return cost;
     }
-
-
-
-
 }
